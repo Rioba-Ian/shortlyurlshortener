@@ -16,7 +16,7 @@ function App() {
    <main class="bg-very-light-gray">
     <div
      id="header-container"
-     class="flex flex-col items-center"
+     class="flex flex-col items-center pb-[15vmin]"
      style={{width: "min(80%, 1440px)", margin: "0 auto"}}
     >
      <FormSection />
