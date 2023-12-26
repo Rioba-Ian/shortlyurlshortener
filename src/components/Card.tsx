@@ -32,14 +32,20 @@ export function StatisticsCard() {
  const [statCards, setStatCards] = createSignal(cardContents);
  return (
   <section class="z-5">
-   <div id="title-section" class="text-center space-y-4 pb-20">
+   <div
+    id="title-section"
+    class="text-center space-y-4 pb-20 flex flex-col items-center"
+   >
     <h2>Advanced Statistics</h2>
-    <p class="text-grayish-violet">
+    <p class="text-grayish-violet sm:w-1/2">
      Track how your links are performing across the web with our advanced
      statistics dashboard.
     </p>
    </div>
-   <div id="stat-cards" class="grid grid-row-3 gap-20">
+   <div
+    id="stat-cards"
+    class="grid grid-row-3 sm:grid-row-1 sm:grid-cols-3 gap-20"
+   >
     <For each={statCards()}>
      {(card, i) => (
       <article class="bg-white flex flex-col items-center px-6 pt-2 pb-8 rounded-xl text-center">
