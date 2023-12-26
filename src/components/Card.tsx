@@ -29,7 +29,7 @@ const cardContents = [
 ];
 
 export function StatisticsCard() {
- const [statCards, setStatCards] = createSignal(cardContents);
+ const [statCards] = createSignal(cardContents);
  return (
   <section class="z-5">
    <div
@@ -47,7 +47,7 @@ export function StatisticsCard() {
     class="grid grid-row-3 sm:grid-row-1 sm:grid-cols-3 gap-20"
    >
     <For each={statCards()}>
-     {(card, i) => (
+     {(card, _i) => (
       <article class="bg-white flex flex-col items-center px-6 pt-2 pb-8 rounded-xl text-center">
        <div
         id="card-img"
