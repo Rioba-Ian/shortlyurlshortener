@@ -1,12 +1,11 @@
-import {createSignal} from "solid-js";
+import {Hero} from "./components/Hero";
 import {Navbar} from "./components/Navbar";
 
 function App() {
- const [count, setCount] = createSignal(0);
-
  return (
   <div style={{width: "min(80%, 1440px)", margin: "0 auto"}}>
    <Navbar />
+   <Hero />
   </div>
  );
 }
