@@ -4,7 +4,7 @@ import {FaSolidBars} from "solid-icons/fa";
 import {createSignal} from "solid-js";
 
 export function Navbar() {
- const [mobileNav, setMobileNav] = createSignal<boolean>(true);
+ const [mobileNav, setMobileNav] = createSignal<boolean>(false);
 
  return (
   <nav>

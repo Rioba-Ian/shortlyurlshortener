@@ -40,6 +40,7 @@ h1 {
 }
 
 button {
+  display: block;
   @apply bg-cyan text-white rounded-3xl px-5 py-2;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -53,4 +54,17 @@ button:focus-visible {
   background-color: hsla(180, 63%, 48%, 0.645);
 }
 
+img{
+  max-width: 100%;
+}
 
+@media (max-width: 639.99px) {
+  :root{
+    font-size: 0.9rem;
+  }
+
+  h1{
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+}
