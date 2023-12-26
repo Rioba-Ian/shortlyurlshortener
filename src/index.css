@@ -8,19 +8,15 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.5;
   font-weight: 500;
   font-size: 1.125rem;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;  
+  @apply bg-white text-very-dark-violet
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  @apply text-dark-violet;
 }
 a:hover {
   color: #535bf2;
@@ -32,28 +28,27 @@ body {
   min-height: 100vh;
 }
 
+nav{
+  margin: 2.5vh 0;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  @apply bg-cyan text-white rounded-3xl px-5 py-2;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  @apply bg-cyan;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
+  background-color: hsla(180, 63%, 48%, 0.645);
 }
 
 
