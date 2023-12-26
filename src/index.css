@@ -12,7 +12,7 @@
   line-height: 1.5;
   font-weight: 500;
   font-size: 1.125rem;
-  @apply bg-white text-very-dark-violet
+  @apply  text-very-dark-violet
 }
 
 a {
@@ -34,6 +34,19 @@ nav{
 
 h1 {
   font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  @apply text-very-dark-violet;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  @apply text-very-dark-violet;
+}
+
+h3 {
+  font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 700;
   @apply text-very-dark-violet;
@@ -67,4 +80,20 @@ img{
     font-size: 2.25rem;
     line-height: 1.1;
   }
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #61C5FA;
+  border:1px solid #5AB0DB;
+}
+input[type="text"]:focus:hover {
+  outline: none;
+  box-shadow: 0px 0px 5px #61C5FA;
+  border:1px solid #5AB0DB;
+  border-radius:0;
+}
+
+p{
+  display: block;
 }

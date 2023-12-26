@@ -5,17 +5,17 @@ export function Hero() {
   <section class="mt-[10vmin] py-4 grid">
    <div
     id="hero-section"
-    class="flex flex-col items-center  gap-8 sm:flex-row-reverse"
+    class="flex flex-col items-center  gap-8 sm:flex-row-reverse pb-[25vmin] sm:pb-[15vmin]"
    >
     <div id="hero-image" class="grid">
      <img src={IllustrationWorking} alt="woman working illustation" />
     </div>
     <div
      id="hero-content"
-     class="grid items-start text-center sm:text-left sm:w-4/5"
+     class="grid items-start justify-center text-center sm:text-left sm:w-4/5"
     >
      <h1>More than just shorter links</h1>
-     <p class="text-shortly-gray mt-2 mb-8">
+     <p class="text-shortly-gray text-center sm:text-left mt-2 mb-8 md:w-3/4">
       Build your brand’s recognition and get detailed insights on how your links
       are performing.
      </p>
