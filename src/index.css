@@ -97,3 +97,85 @@ input[type="text"]:focus:hover {
 p{
   display: block;
 }
+
+
+
+#card-1::before {
+  content: "-";
+  position: absolute;
+  font-size: 10px;
+  top: 30%;
+  left: -5rem;
+  width: 5rem;
+  height: 12px;
+  @apply bg-cyan text-cyan;
+}
+
+#card-2::before {
+  content: "-";
+  position: absolute;
+  font-size: 10px;
+  top: 10%;
+  left: -5rem;
+  width: 5rem;
+  height: 12px;
+  @apply bg-cyan text-cyan;
+}
+
+#card-1{
+  @apply sm:translate-y-12;
+}
+
+#card-2{
+  @apply sm:translate-y-24;
+}
+
+#cta-section{
+  background: center / cover url(./assets/images/bg-boost-desktop.svg) no-repeat oklab(59.69% 0.1007 0.1191 / 0.9);
+  background-blend-mode: difference;
+}
+
+@media (max-width: 639.99px) {
+  :root{
+    font-size: 0.9rem;
+  }
+
+  h1{
+    font-size: 2.25rem;
+    line-height: 1.1;
+    /* color: #3b30547d; */
+  }
+
+  #card-1::before{
+    display: none;
+  }
+
+  #card-2::before{
+    display: none;
+    
+  }
+
+  #card-1::after{
+    content: "-";
+    position: absolute;
+    font-size: 10px;
+    top: -24%;
+    left: 45%;
+    width: 2.4rem;
+    height: 8px;
+    @apply bg-cyan text-cyan;
+    rotate: 90deg;
+  }
+
+  #card-2::after{
+    content: "-";
+    position: absolute;
+    font-size: 10px;
+    top: -24%;
+    left: 45%;
+    width: 2.4rem;
+    height: 8px;
+    @apply bg-cyan text-cyan;
+    rotate: 90deg; 
+  }
+}

@@ -44,11 +44,14 @@ export function StatisticsCard() {
    </div>
    <div
     id="stat-cards"
-    class="grid grid-row-3 sm:grid-row-1 sm:grid-cols-3 gap-20"
+    class="grid grid-row-3 sm:grid-row-1 sm:grid-cols-3 gap-20 z-10"
    >
     <For each={statCards()}>
-     {(card, _i) => (
-      <article class="bg-white flex flex-col items-center px-6 pt-2 pb-8 rounded-xl text-center">
+     {(card, i) => (
+      <article
+       class="bg-white relative flex flex-col items-center px-6 pt-2 pb-8 rounded-xl text-center "
+       id={`card-${i()}`}
+      >
        <div
         id="card-img"
         class="bg-very-dark-blue rounded-full p-4 -translate-y-12"

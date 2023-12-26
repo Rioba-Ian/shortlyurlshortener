@@ -6,6 +6,7 @@ module.exports = {
    colors: {
     cyan: "hsl(180, 66%, 49%)",
     "dark-violet": "hsl(257, 27%, 26%)",
+    "dark-violet-translucent": "hsl(257, 27%, 26%, 0.3)",
     "very-light-gray": "#f0f1f6",
     "error-red": "hsl(0, 87%, 67%)",
     "shortly-gray": "hsl(0, 0%, 75%)",
