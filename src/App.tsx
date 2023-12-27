@@ -1,5 +1,6 @@
 import {CTA} from "./components/CTA";
 import {StatisticsCard} from "./components/Card";
+import {Footer} from "./components/Footer";
 import {FormSection} from "./components/Form";
 import {Hero} from "./components/Hero";
 import {Navbar} from "./components/Navbar";
@@ -34,6 +35,15 @@ function App() {
      </div>
     </div>
    </section>
+   <footer class="bg-very-dark-violet">
+    <div
+     id="footer-container"
+     class="flex flex-col items-center"
+     style={{width: "min(80%, 1440px)", margin: "0 auto"}}
+    >
+     <Footer />
+    </div>
+   </footer>
   </div>
  );
 }
