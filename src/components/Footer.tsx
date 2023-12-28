@@ -68,10 +68,10 @@ export function Footer() {
  const [compLinks] = createSignal(companyLinks);
  const [social] = createSignal(socialLinks);
  return (
-  <section class="text-shortly-gray py-8">
+  <section class="text-shortly-gray w-full py-8 ">
    <div
     id="footer-links"
-    class="py-6 space-y-12 text-center sm:flex text-white"
+    class="py-6 w-full space-y-12 text-center sm:flex items-baseline justify-between text-white"
    >
     <h4 class="text-white text-4xl py-4">Shortly</h4>
     <div class="space-y-5">
