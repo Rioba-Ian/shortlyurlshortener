@@ -4,10 +4,12 @@ import {Footer} from "./components/Footer";
 import {FormSection} from "./components/Form";
 import {Hero} from "./components/Hero";
 import {Navbar} from "./components/Navbar";
+import {Toaster} from "solid-toast";
 
 function App() {
  return (
   <div>
+   <Toaster />
    <div
     id="header-container"
     style={{width: "min(80%, 1440px)", margin: "0 auto"}}

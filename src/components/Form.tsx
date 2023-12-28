@@ -1,7 +1,8 @@
 import {For, Show, createEffect, createSignal} from "solid-js";
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 import {onMount} from "solid-js";
 import {z} from "zod";
+import {toast} from "solid-toast";
 
 const urlSchema = z.object({
  url: z
@@ -71,29 +72,23 @@ export function FormSection() {
   console.log(payload, "payload");
 
   try {
-   const response: AxiosResponse = await axios.post(
-    SHORTLY_URL_API,
-
-    payload,
-    {
+   toast.promise(
+    axios.post(SHORTLY_URL_API, payload, {
      headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, X-CSRF-TOKEN",
      },
+    }),
+    {
+     loading: "Shortening URL...",
+     success: (res) => {
+      const apiResponse = res.data;
+      setSavedUrlData((prev) => [apiResponse, ...prev]);
+      formElement.reset();
+      return <span>URL shortened successfully!</span>;
+     },
+     error: <span>An error happended</span>,
     }
    );
-
-   console.log(response.status);
-
-   if (response.status !== 200) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-   }
-
-   const apiResponse = await response.data;
-   setSavedUrlData((prev) => [apiResponse, ...prev]);
-   formElement.reset();
   } catch (e: unknown) {
    if (e instanceof axios.AxiosError) {
     setError(e.message);
