@@ -56,6 +56,10 @@ export function FormSection() {
    return;
   }
 
+  if (result.success) {
+   setError(null);
+  }
+
   console.log(result);
 
   const payload = {
